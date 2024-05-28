@@ -1,0 +1,13 @@
+from pydub import AudioSegment
+
+def convert_to_mp3(input_file, output_file):
+    # Load M4B file
+    audio = AudioSegment.from_file(input_file, format="m4b")
+    
+    # export mp3 file
+    audio.export(output_file, format="mp3")
+
+
+input_file = "input.m4b"
+output_file = "output.mp3"		
+convert_to_mp3(input_file, output_file)
